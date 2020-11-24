@@ -7,6 +7,7 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 0.75rem;
+  min-height: 100vh;
   color: #1d1e35;
   margin: 0;
   background: linear-gradient(#af67e9, #7665e7);
@@ -15,17 +16,16 @@ body {
 
 main {
   display: grid;
-  min-height: 100vh;
-  padding: 12em 0 4em;
 }
 
 section {
   position: relative;
-  background: #e7e7e9;
+  background: white;
   width: 88%;
-  margin: 0 auto;
-  padding: 8em 2.25em 4em;
+  margin: 12em auto;
+  padding: 9em 2.25em 4em;
   border-radius: 2em;
+  box-shadow: 0 5em 4em -2em #0004;
 }
 section::before {
   content: url(images/illustration-woman-online-mobile.svg);
@@ -33,18 +33,19 @@ section::before {
   top: 0;
   left: 46%;
   transform: translate(-50%, -54%);
-  filter: drop-shadow(0 2.5em 0 rgba(118, 101, 231, 0.15));
+  filter: drop-shadow(0 2.5em 1px #00a1);
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.6em;
   text-align: center;
   letter-spacing: 1px;
+  margin: 0.8em 0 0.25em;
 }
 
 details {
   position: relative;
-  padding: 1.25em 0;
+  padding: 1.25em 0.8em 1.25em 0;
   border-bottom: 1px solid rgba(120, 120, 135, 0.25);
   color: #787887;
 }
