@@ -1,0 +1,93 @@
+    $clr-text: hsl(238, 29%, 16%);
+    $clr-text-active: hsl(14, 80%, 65%);
+    $softBlue: hsl(248, 73%, 65%);
+    $softViolet: hsl(273, 75%, 66%);
+    $clr-neutral-dark: hsl(237, 12%, 33%);
+    $clr-neutral-mid: hsl(240, 6%, 50%);
+    $clr-neutral-light: hsl(240, 5%, 91%);
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Kumbh Sans', sans-serif;
+        font-size: .75rem;
+        color: $clr-text;
+        margin: 0;
+        background: linear-gradient($softViolet, $softBlue);
+        line-height: 1.5;
+    }
+    
+    main {
+        display: grid;
+        min-height: 100vh;
+        // justify-content: center;
+        // align-items: center;
+        padding: 12em 0 4em;
+    }
+    
+    section {
+        position: relative;
+        background: $clr-neutral-light;
+        width: 88%;
+        margin: 0 auto;
+        padding: 8em 2.25em 4em;
+        border-radius: 2em;
+        &::before {
+            content: url(images/illustration-woman-online-mobile.svg);
+            position: absolute;
+            top: 0;
+            left: 46%;
+            transform: translate(-50%, -54%);
+            filter: drop-shadow(0 2.5em 0 rgba($softBlue, .15));
+            // transform: translate(-50%, -50%);
+        }
+    }
+    
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+    
+    details {
+        position: relative;
+        padding: 1.25em 0;
+        border-bottom: 1px solid rgba($clr-neutral-mid, .25);
+        color: $clr-neutral-mid;
+        summary {
+            list-style-position: inside;
+            &::-webkit-details-marker {
+                display: none;
+            }
+            margin-top: .1em;
+            font-size: 1.125em;
+            color: $clr-text;
+        }
+        &::after {
+            position: absolute;
+            content: url(images/icon-arrow-down.svg);
+            top: 1em;
+            right: 0;
+        }
+        &[open] {
+            summary {
+                font-weight: 700;
+                margin-bottom: .5em;
+            }
+        }
+        &[open]::after {
+            transform: rotate(180deg);
+        }
+    }
+    
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+    }
+    
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
