@@ -42,15 +42,15 @@ section::before {
     padding: 4em 8em 6em 0;
     background-color: white;
     background-image: url(images/bg-pattern-desktop.svg);
-    background-size: contain;
     background-repeat: no-repeat;
-    background-position-x: -30%;
+    background-position: left -550px top -300px;
   }
   section::before {
     content: url(images/illustration-box-desktop.svg);
     filter: drop-shadow(0 2.5em 5px #00a3);
-    left: 0;
-    top: 58%;
+    left: -10%;
+    top: 0;
+    transform: translateY(100%);
     z-index: 2;
   }
 }
@@ -78,6 +78,7 @@ details {
   color: #787887;
 }
 details summary {
+  cursor: pointer;
   margin-top: 0.1em;
   font-size: 1.125em;
   color: #1d1e35;
