@@ -38,12 +38,11 @@
             content: url(images/illustration-woman-online-mobile.svg);
             position: absolute;
             top: 0;
-            left: 46%;
+            left: calc(50% - 1.5em);
             transform: translate(-50%, -54%);
             filter: drop-shadow(0 2.5em 1px #00a1);
-            // transform: translate(-50%, -50%);
         }
-        @media (min-width: 1180px) {
+        @media (min-width: 925px) {
             display: flex;
             padding: 4em 8em 6em 0;
             background-color: white;
@@ -66,7 +65,7 @@
         text-align: center;
         letter-spacing: 1px;
         margin: .8em 0 .25em;
-        @media (min-width: 1180px) {
+        @media (min-width: 925px) {
             text-align: left;
         }
     }
@@ -77,14 +76,15 @@
     
     details {
         position: relative;
-        padding: 1.25em .8em 1.25em 0;
+        padding: 1.25em 0em;
         border-bottom: 1px solid rgba($clr-neutral-mid, .25);
         color: $clr-neutral-mid;
+        z-index: 2;
         summary {
             cursor: pointer;
             margin-top: .1em;
             font-size: 1.125em;
-            color: $clr-text;
+            color: $clr-neutral-mid;
             list-style-position: inside;
             &::-webkit-details-marker {
                 display: none;
@@ -96,11 +96,14 @@
         &::after {
             position: absolute;
             content: url(images/icon-arrow-down.svg);
+            pointer-events: none;
+            z-index: 1;
             top: 1em;
             right: 0;
         }
         &[open] {
             summary {
+                color: $clr-text;
                 font-weight: 700;
                 margin-bottom: .5em;
             }
@@ -114,7 +117,7 @@
         display: none;
         position: relative;
         flex-basis: 100%;
-        @media (min-width: 1180px) {
+        @media (min-width: 925px) {
             overflow-x: hidden;
             display: block;
             img {

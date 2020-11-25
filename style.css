@@ -32,11 +32,11 @@ section::before {
   content: url(images/illustration-woman-online-mobile.svg);
   position: absolute;
   top: 0;
-  left: 46%;
+  left: calc(50% - 1.5em);
   transform: translate(-50%, -54%);
   filter: drop-shadow(0 2.5em 1px #00a1);
 }
-@media (min-width: 1180px) {
+@media (min-width: 925px) {
   section {
     display: flex;
     padding: 4em 8em 6em 0;
@@ -61,7 +61,7 @@ h1 {
   letter-spacing: 1px;
   margin: 0.8em 0 0.25em;
 }
-@media (min-width: 1180px) {
+@media (min-width: 925px) {
   h1 {
     text-align: left;
   }
@@ -73,15 +73,16 @@ h1 {
 
 details {
   position: relative;
-  padding: 1.25em 0.8em 1.25em 0;
+  padding: 1.25em 0em;
   border-bottom: 1px solid rgba(120, 120, 135, 0.25);
   color: #787887;
+  z-index: 2;
 }
 details summary {
   cursor: pointer;
   margin-top: 0.1em;
   font-size: 1.125em;
-  color: #1d1e35;
+  color: #787887;
   list-style-position: inside;
 }
 details summary::-webkit-details-marker {
@@ -93,10 +94,13 @@ details summary:hover {
 details::after {
   position: absolute;
   content: url(images/icon-arrow-down.svg);
+  pointer-events: none;
+  z-index: 1;
   top: 1em;
   right: 0;
 }
 details[open] summary {
+  color: #1d1e35;
   font-weight: 700;
   margin-bottom: 0.5em;
 }
@@ -109,7 +113,7 @@ details[open]::after {
   position: relative;
   flex-basis: 100%;
 }
-@media (min-width: 1180px) {
+@media (min-width: 925px) {
   .illustration {
     overflow-x: hidden;
     display: block;
